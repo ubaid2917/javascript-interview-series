@@ -122,4 +122,100 @@ const res2 = numbers7.splice(1, 3);   // in this case it will remove the element
 numbers7.splice(1, 3, 10,20,30,40) // in this case it will replace the elements from index 1 to index 3 with 10,20,30,40
  const res3 =numbers7.splice(1,4,70,80)
 console.log( 'numbers7', numbers7)
-console.log( 'res3', res3)
+console.log( 'res3', res3)  
+
+
+
+// conctating array 
+
+let arr9 = [1,2,4,4,5,6];
+let arr10 = [10,20,30,40,50]
+
+let res4 = arr9.concat(arr10);
+console.log('res4', res4)   
+
+
+// getting array length 
+let arr11 = [1,2,4,4,5,6];
+console.log('array length', arr11.length)   
+
+
+//* indexof 
+// :To check if an item exist in an array. If it exists it returns the index else it returns -1. 
+
+let arr12 = [1,2,3,4,5,6,7];
+console.log(arr12.indexOf(4)); 
+
+console.log(arr12.indexOf(10)); //   it give -1 because 10 is not present in the array 12
+
+
+
+// checking item exist r not in array
+const fruits = ['banana', 'orange', 'mango', 'lemon']; 
+
+if(fruits.indexOf('grape') === -1){
+    console.log('grape is not present in the array')
+}else{
+    console.log('apple is present in the array')
+}
+
+//* lastIndexOf 
+// : It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
+
+const numbers8 = [1, 2, 3, 4, 5, 2, 6, 6, 7, 8, 9, 10];
+
+console.log('lastIndexof', numbers8.lastIndexOf(7));
+console.log('lastIndexof', numbers8.lastIndexOf(11)) 
+
+if(numbers8.lastIndexOf(12) === -1){
+    console.log('12 is not present in the array')
+}else{
+    console.log('12 is present in the array')
+}  
+  
+
+
+
+// * checking array 
+// Array.isArray:To check if the data type is an array
+
+const numbers9 = [1,2,3,4,5,6];
+console.log(Array.isArray(numbers9)); 
+const str = 20;
+
+console.log(Array.isArray(str))
+
+
+
+// * Converting array to string
+ //toString:Converts array to string 
+
+ const number10 = [20,30,40,50]
+ console.log(number10.toString())  
+
+ const number11 = ['apple', 'mango', 'banana']
+ console.log(number11.toString())  
+
+
+
+ //* joining array elements 
+  
+ const number12 = [40,50,60,70];
+ console.log(number12.join(''))
+ console.log(number12.join('-'))
+ console.log(number12.join(' '))
+ console.log(number12.join(','))
+
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]; 
+const res5 = webTechs.join(' '); 
+console.log(typeof(res5))
+console.log(webTechs.join(','))
