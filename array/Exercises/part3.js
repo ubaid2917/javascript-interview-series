@@ -73,4 +73,19 @@ console.log('arr3', arr3)
 
 //* 35 Replace a specific value in an array.
 
+
 let arr4 = [10,20,30,40,50,60,70,80]
+arr4.splice(3, 1, 20)
+
+console.log('arr4', arr4)  
+
+
+// replace dynamic value 
+function replaceValue(arr, oldValue, newValue) {
+    const index = arr.indexOf(oldValue);
+    if(index !== -1){
+        arr.splice(oldValue, 1,  newValue)
+    }
+    return arr;
+} 
+console.log(replaceValue(arr4, 80, 90))
