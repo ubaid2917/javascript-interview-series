@@ -89,3 +89,36 @@ function replaceValue(arr, oldValue, newValue) {
     return arr;
 } 
 console.log(replaceValue(arr4, 80, 90))
+
+
+//* Find the largest and smallest number together.  
+// using bulitin method min and max 
+
+let max = Math.max(...arr4);
+let min = Math.min(...arr4);
+
+console.log('max', max);
+console.log('min', min)  
+
+// using without bilut in min 
+
+function minAndMax(arr){
+  let min = arr[0];
+  let max = arr[0];
+
+  for(let i = 0; i<arr.length; i++){
+
+      if(min > arr[i]){
+        min = arr[i]
+      }
+
+      if(max < arr[i]){
+        max = arr[i]
+      }
+  }
+
+  console.log('min', min);
+  console.log('max', max)
+} 
+
+minAndMax(arr4)
