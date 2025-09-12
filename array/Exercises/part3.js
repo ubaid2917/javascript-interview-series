@@ -91,7 +91,7 @@ function replaceValue(arr, oldValue, newValue) {
 console.log(replaceValue(arr4, 80, 90))
 
 
-//* Find the largest and smallest number together.  
+//* 36 Find the largest and smallest number together.  
 // using bulitin method min and max 
 
 let max = Math.max(...arr4);
@@ -121,4 +121,26 @@ function minAndMax(arr){
   console.log('max', max)
 } 
 
-minAndMax(arr4)
+minAndMax(arr4)    
+
+
+
+//* 37  Write a function to move all the zeros to the end.  
+function moveAllZero(arr){
+    let zeroNum = [];
+    let nonZeroNum = []; 
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] !== 0){
+            nonZeroNum.push(arr[i]);
+        } else {
+            zeroNum.push(arr[i]);
+        }
+    }  
+
+    return [...nonZeroNum, ...zeroNum];
+}
+
+const res = moveAllZero([10,20,304,0,0,0,1,0,30,0,40]);
+console.log(res);
+
