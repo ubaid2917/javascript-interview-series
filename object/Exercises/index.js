@@ -138,3 +138,23 @@ result.make = "honda";
 console.log('shallow copy', result)
 console.log('car 3', car3)
 
+
+//* Merge two objects.
+  
+let std1 = {
+ name: "ubaid",
+ age: 20
+} 
+
+let std2 = {
+  name: "sanaullah",
+  age: 21
+}
+
+let students = {
+  std1: {...std1},
+  std2: {...std2}
+}
+
+console.log('students', students)
+
