@@ -143,4 +143,7 @@ function moveAllZero(arr){
 
 const res = moveAllZero([10,20,304,0,0,0,1,0,30,0,40]);
 console.log(res);
+  
+
+
 

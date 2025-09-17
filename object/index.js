@@ -164,4 +164,10 @@ console.log('object enteries 3', Object.entries(person3))
 // & Checking properties using hasOwnProperty()
 // hasOwnProperty: To check if a specific key or property exist in an object
 console.log(copyPerson.hasOwnProperty('name'))
-console.log(copyPerson.hasOwnProperty('score'))
+console.log(copyPerson.hasOwnProperty('score'))  
+
+
+
+// & deep copy vs shallow copy 
+//* shallow copy 
+// copy just outer level of object 
