@@ -10,7 +10,7 @@ console.log(car)
 // * add car details 
 
 car.name = 'Civic';
-car.model  = 'Honda';
+car.model = 'Honda';
 car.color = 'white';
 car.price = '1cr';
 
@@ -75,31 +75,66 @@ console.log('car', car)
 //  })
 
 
- //  * Check if a property exists in an object
- 
-   const car2 = {
-    name: "Civic",
-    color: "black",
-    price: "1.5cr"
-   } 
+//  * Check if a property exists in an object
 
-   console.log(car2.hasOwnProperty("isAccident")) 
-   console.log(car2.hasOwnProperty("price"))
+const car2 = {
+  name: "Civic",
+  color: "black",
+  price: "1.5cr"
+}
+
+console.log(car2.hasOwnProperty("isAccident"))
+console.log(car2.hasOwnProperty("price"))
 
 
 
-  //  *  7 Print all keys of an object.   
+//  *  7 Print all keys of an object.   
 
-  const details = {
-    name: "ubaid",
-    age: 20,
-    isMarried: false
+const details = {
+  name: "ubaid",
+  age: 20,
+  isMarried: false
+}
+
+console.log(Object.keys(details))
+
+
+
+//* 8 Print all values of an object.   
+console.log(Object.values(details))
+console.log(Object.values(car2))
+
+
+//* 9 Print all enteries of an object 
+console.log(Object.entries(details))
+console.log(Object.entries(car2))
+
+
+// using for of loop 
+for (let [key, value] of Object.entries(details)) {
+  console.log(key, ":", value)
+}
+
+
+
+//* 10 Make a shallow copy of an object. 
+
+const car3 = {
+  make: "Toyota",
+  model: "Corolla",
+  features: {
+    airbags: true,
+    abs: true
   }
-   
-  console.log(Object.keys(details))
+};   
+
+const result = {...car3} 
+
+console.log('shallow obj', result)
 
 
+result.make = "honda";
 
-   //  *78 Print all values of an object.   
-    console.log(Object.values(details))
-    console.log(Object.values(car2))
+console.log('shallow copy', result)
+console.log('car 3', car3)
+
